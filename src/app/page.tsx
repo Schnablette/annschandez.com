@@ -11,10 +11,10 @@ import {
   LinkedInIcon,
   XIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoBambu from '@/images/logos/bambumeta_logo.jpeg'
+import logoPaylocity from '@/images/logos/PCTY.svg'
+import logoDJ from '@/images/logos/Dow_Jones_Logo.svg'
+import logoAllied from '@/images/logos/allied-logo.png'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -189,7 +189,7 @@ function Resume() {
     {
       company: 'Planetaria',
       title: 'CEO',
-      logo: logoPlanetaria,
+      logo: logoDJ,
       start: '2019',
       end: {
         label: 'Present',
@@ -199,21 +199,21 @@ function Resume() {
     {
       company: 'Airbnb',
       title: 'Product Designer',
-      logo: logoAirbnb,
+      logo: logoBambu,
       start: '2014',
       end: '2019',
     },
     {
       company: 'Facebook',
       title: 'iOS Software Engineer',
-      logo: logoFacebook,
+      logo: logoPaylocity,
       start: '2011',
       end: '2014',
     },
     {
       company: 'Starbucks',
       title: 'Shift Supervisor',
-      logo: logoStarbucks,
+      logo: logoAllied,
       start: '2008',
       end: '2011',
     },
@@ -273,16 +273,19 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software designer, founder, and amateur astronaut.
+            Software craftswoman and self-described dabbler.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            I’m Ann Schandez, a radical lover of grassroots community endeavors,
+            color, and reading the first half of a good non-fiction book. With
+            4+ years of professional experience in design, engineering, and
+            product strategy, I’ve learned my greatest strength is the ability
+            to learn anything. My last roaring success was leading a marketing
+            product MVP launch that directly led to VC funding for the company.
+            Want to collaborate on the next big success?
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
+            {/* <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
             <SocialLink
               href="#"
               aria-label="Follow on Instagram"
@@ -292,9 +295,9 @@ export default async function Home() {
               href="#"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
-            />
+            /> */}
             <SocialLink
-              href="#"
+              href="https://www.linkedin.com/in/annschandez"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
@@ -303,17 +306,17 @@ export default async function Home() {
       </Container>
       <Photos />
       <Container className="mt-24 md:mt-28">
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+        {/* <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))}
-          </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
-            <Resume />
-          </div>
+          </div> */}
+        <div className="space-y-10 lg:pl-16 xl:pl-24">
+          <Newsletter />
+          <Resume />
         </div>
+        {/* </div> */}
       </Container>
     </>
   )
