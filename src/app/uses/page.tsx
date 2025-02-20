@@ -60,11 +60,8 @@ export default function Uses() {
             made my last entry.
           </Tool>
           <Tool title="Pip Decks">
-            I bought these babies over Black Friday when they were heavily
-            discounted. While they still cost an arm and a leg, I have no
-            regrets about this purchase. I consistantly use the tactics in the
-            decks to build workshop curriculum, guide personal discovery, and
-            generate business ideas.
+            I consistantly use the tactics in the decks to build workshop
+            curriculum, guide personal discovery, and generate business ideas.
           </Tool>
           <Tool title="Notion">
             Yes, I am on the Notion train. Whether it's for project management
@@ -96,9 +93,9 @@ export default function Uses() {
             sketchbook, this is the only tool I use for UI design.
           </Tool>
           <Tool title="Affinity suite">
-            Last year, I switched from Adobe's painfully expensive subscription
-            model to the one time payment model of Affinity. It has replaced my
-            need for Illustrator, Photoshop, and Publisher.
+            Last year, I switched from Adobe to Affinity. All my logowork and
+            print design are now done in Affinity. It has replaced my need for
+            Illustrator, Photoshop, and Publisher.
           </Tool>
         </ToolsSection>
         <ToolsSection title="Videography">
@@ -121,10 +118,6 @@ export default function Uses() {
           </Tool>
         </ToolsSection>
         <ToolsSection title="Workstation">
-          <Tool title="14” MacBook Pro, M1 Max, 64GB RAM (2021)">
-            For design, frontend engineering, and daily usage, there is no
-            competitor for me. Apple is the only way to go.
-          </Tool>
           <Tool title="Bose 700s Noise Cancellation Headphones">
             My absolute favorite headphones. The new QC Ultras don't provide as
             much noise cancellation, nor do they block out as much background
