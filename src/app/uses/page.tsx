@@ -82,8 +82,8 @@ export default function Uses() {
             Github profile.
           </Tool>
           <Tool title="AWS">
-            I'm learning this tool currently. I'm convinced it's the cheapest
-            way to validate a business idea by using SES, Route 53, and Amplify
+            I'm learning this tool currently. I'm convinced the cheapest
+            way to validate a business idea is by using SES, Route 53, and Amplify
             to spin up a simple landing page with email capture.
           </Tool>
         </ToolsSection>
