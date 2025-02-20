@@ -224,7 +224,7 @@ function Resume() {
   let resume: Array<Role> = [
     {
       company: 'OPIS: A Dow Jones Company',
-      title: 'Senior UX Engineer',
+      title: 'Senior Software Engineer',
       logo: logoDJ,
       start: 'Feb 2024',
       end: {
