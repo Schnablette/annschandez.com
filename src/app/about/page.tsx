@@ -27,6 +27,7 @@ function SocialLink({
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
+        target="_blank"
         className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
       >
         <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
@@ -69,58 +70,87 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m Spencer Sharp. I live in New York City, where I design the
-            future.
+            I'm Ann Schandez. Let's talk about passion.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
+              Some people are passionate about designing interfaces or coding
+              simple solutions to complex problems. While I enjoy both of these
+              pastimes, that’s not who I am. My true passion is
+              relationship-building. I am nowhere without my community. My
+              favorite book, <em>Braiding Sweetgrass</em> by Robin Wall
+              Kimmerer, outlines how we flourish by working together. This truth
+              guides my business decisions as much as anything else in my life.
             </p>
             <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
+              I believe in constant experimentation as a means for
+              self-improvement. My superpower is strategic abandonment, so I'm
+              not scared to pivot if a tactic isn’t producing results. That
+              being said, I write in pen and am unafraid to show the process.
+              You can find proverbial sketch marks scattered all over my
+              LinkedIn, blog posts, and journals. These “failed” experiments
+              have built the foundation of who I am today, and I’m pretty happy
+              with that.
             </p>
             <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
+              Outside of money-making, I’m slow and unproductive. I craft, play
+              video games, and spend time with my favorite person in the world.
+              My wife is incredibly supportive of my pursuit to live an
+              interesting life. She grounds me when I’m thinking too big and
+              encourages me when I’m not thinking big enough. She is truly my
+              other half.
             </p>
             <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
+              I hope reading a little about me encourages you to reach out.
+              Regardless of your interest in working with me, I’d love to
+              connect. Please drop me a line on{' '}
+              <a
+                href="https://www.linkedin.com/in/annschandez/"
+                className="text-blue-400 underline dark:text-blue-200"
+                target='_blank'
+              >
+                LinkedIn
+              </a>{' '}
+              or at{' '}
+              <a
+                href="mailto:annschandez@gmail.com"
+                className="text-blue-400 underline dark:text-blue-200"
+                target='_blank'
+              >
+                my personal email
+              </a>
+              .
             </p>
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={XIcon}>
+            {/* <SocialLink href="#" icon={XIcon}>
               Follow on X
             </SocialLink>
             <SocialLink href="#" icon={InstagramIcon} className="mt-4">
               Follow on Instagram
-            </SocialLink>
-            <SocialLink href="#" icon={GitHubIcon} className="mt-4">
+            </SocialLink> */}
+            <SocialLink
+              href="https://github.com/Schnablette/mint-ui"
+              icon={GitHubIcon}
+              className="mt-4"
+            >
               Follow on GitHub
             </SocialLink>
-            <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
+            <SocialLink
+              href="https://www.linkedin.com/in/annschandez/"
+              icon={LinkedInIcon}
+              className="mt-4"
+            >
               Follow on LinkedIn
             </SocialLink>
             <SocialLink
-              href="mailto:spencer@planetaria.tech"
+              href="mailto:annschandez@gmail.com"
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              spencer@planetaria.tech
+              annschandez@gmail.com
             </SocialLink>
           </ul>
         </div>

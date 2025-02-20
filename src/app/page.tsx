@@ -20,6 +20,8 @@ import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
+import kyle from '@/images/kyle.jpeg'
+import mom from '@/images/mom.jpg'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
@@ -41,6 +43,26 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
       <path
         d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
         className="stroke-zinc-400 dark:stroke-zinc-500"
+      />
+    </svg>
+  )
+}
+
+function SpeechBubbleIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      {...props}
+    >
+      <path
+        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
       />
     </svg>
   )
@@ -104,7 +126,7 @@ function SocialLink({
   icon: React.ComponentType<{ className?: string }>
 }) {
   return (
-    <Link className="group -m-1 p-1" {...props}>
+    <Link className="group -m-1 p-1" target="_blank" {...props}>
       <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
   )
@@ -158,21 +180,21 @@ function Role({ role }: { role: Role }) {
 
   return (
     <li className="flex gap-4">
-      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-50 dark:ring-0">
+        <Image src={role.logo} alt="" className="h-auto w-7" unoptimized />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
-        <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
+        <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-50">
           {role.company}
         </dd>
         <dt className="sr-only">Role</dt>
-        <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+        <dd className="text-xs text-zinc-500 dark:text-zinc-300">
           {role.title}
         </dd>
         <dt className="sr-only">Date</dt>
         <dd
-          className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+          className="ml-auto text-xs text-zinc-400 dark:text-zinc-300"
           aria-label={`${startLabel} until ${endLabel}`}
         >
           <time dateTime={startDate}>{startLabel}</time>{' '}
@@ -187,41 +209,41 @@ function Role({ role }: { role: Role }) {
 function Resume() {
   let resume: Array<Role> = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
+      company: 'OPIS: A Dow Jones Company',
+      title: 'Senior UX Engineer',
       logo: logoDJ,
-      start: '2019',
+      start: 'Feb 2024',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
+      company: 'BambuMeta',
+      title: 'Product Owner, Software Engineer',
       logo: logoBambu,
-      start: '2014',
-      end: '2019',
+      start: 'Mar 2023',
+      end: 'Nov 2023',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
+      company: 'Paylocity',
+      title: 'Design System Engineer',
       logo: logoPaylocity,
-      start: '2011',
-      end: '2014',
+      start: 'Mar 2022',
+      end: 'Mar 2023',
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
+      company: 'Allied Solutions',
+      title: 'UX Engineer',
       logo: logoAllied,
-      start: '2008',
-      end: '2011',
+      start: 'Aug 2020',
+      end: 'Mar 2022',
     },
   ]
 
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+    <div className="rounded-2xl border border-zinc-100 bg-white p-6 dark:border-zinc-700/40 dark:bg-zinc-900">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-50">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Work</span>
       </h2>
@@ -230,9 +252,14 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+      <Button
+        href="/SchandezResume.pdf"
+        download="Ann Schandez Resume"
+        variant="secondary"
+        className="group mt-6 w-full"
+      >
+        Download Resume
+        <ArrowDownIcon className="h-4 w-4 stroke-white transition group-active:stroke-white/70 dark:stroke-white dark:group-hover:stroke-white dark:group-active:stroke-white/70" />
       </Button>
     </div>
   )
@@ -272,14 +299,15 @@ export default async function Home() {
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software craftswoman and self-described dabbler.
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-50">
+            Digital craftswoman.
+            <br /> Self-described dabbler.
           </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Ann Schandez, a radical lover of grassroots community endeavors,
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-300">
+            I'm Ann Schandez, a radical lover of grassroots community endeavors,
             color, and reading the first half of a good non-fiction book. With
             4+ years of professional experience in design, engineering, and
-            product strategy, I’ve learned my greatest strength is the ability
+            product strategy, I've learned my greatest strength is the ability
             to learn anything. My last roaring success was leading a marketing
             product MVP launch that directly led to VC funding for the company.
             Want to collaborate on the next big success?
@@ -306,16 +334,68 @@ export default async function Home() {
       </Container>
       <Photos />
       <Container className="mt-24 md:mt-28">
+        <div className="rounded-2xl border border-zinc-100 bg-white p-6 dark:border-zinc-700/40 dark:bg-zinc-900">
+          <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-50">
+            <SpeechBubbleIcon className="h-6 w-6 flex-none" />
+            <span className="ml-3">Reviews</span>
+          </h2>
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-300">
+            "Ann is an <strong>incredible asset</strong> to any team. She is a
+            delightful cultural asset, which cannot be understated. However,
+            more importantly, her work product is more than impressive.{' '}
+            <strong>The product Ann has created was company-changing</strong> as
+            it reinvigorated her team, investors and the like.""
+          </p>
+          <div className="mt-3 flex items-center">
+            <div className="relative mt-1 mr-3 flex h-10 w-10 flex-none items-center justify-center rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-50 dark:ring-0">
+              <Image
+                src={kyle}
+                alt="Kyle Pretsch Headshot"
+                className="rounded-full"
+                unoptimized
+              />
+            </div>
+            <p className="text-base text-zinc-600 dark:text-zinc-300">
+              <a
+                href="https://www.linkedin.com/in/kpretsch/"
+                className="text-blue-400 underline dark:text-blue-200"
+                target="_blank"
+              >
+                Kyle Pretsch
+              </a>
+              , President of BambuMeta
+            </p>
+          </div>
+          {/* <div className="mx-auto my-6 h-[1px] w-full border-b border-zinc-100 dark:border-zinc-700/40" />
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-300">
+            "Ann has that rare combination of{' '}
+            <strong>technical depth and business acumen</strong> that every
+            startup CEO dreams of finding in a PM."
+          </p>
+          <div className="mt-3 mb-3 flex items-center">
+            <div className="relative mt-1 mr-3 flex h-10 w-10 flex-none items-center justify-center rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-50 dark:ring-0">
+              <Image
+                src={mom}
+                alt="Ann's Mom's Headshot"
+                className="rounded-full"
+                unoptimized
+              />
+            </div>
+            <p className="text-base text-zinc-600 dark:text-zinc-300">
+              Townsend Schnabel, Ann's Mother
+            </p>
+          </div> */}
+        </div>
+      </Container>
+      <Container className="mt-24 md:mt-28">
         {/* <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))}
           </div> */}
-        <div className="space-y-10 lg:pl-16 xl:pl-24">
-          <Newsletter />
-          <Resume />
-        </div>
+        {/* <Newsletter /> */}
+        <Resume />
         {/* </div> */}
       </Container>
     </>

@@ -36,85 +36,131 @@ function Tool({
 
 export const metadata = {
   title: 'Uses',
-  description: 'Software I use, gadgets I love, and other things I recommend.',
+  description: 'The software and gadgets I use and recommend.',
 }
 
 export default function Uses() {
   return (
     <SimpleLayout
-      title="Software I use, gadgets I love, and other things I recommend."
-      intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
+      title="The software and gadgets I use and recommend."
+      intro="While there are many ways to get a job done, this is how I get the job done. Since the Pandemic, these staples follow me from setup to setup."
     >
       <div className="space-y-20">
-        <ToolsSection title="Workstation">
-          <Tool title="16” MacBook Pro, M1 Max, 64GB RAM (2021)">
-            I was using an Intel-based 16” MacBook Pro prior to this and the
-            difference is night and day. I’ve never heard the fans turn on a
-            single time, even under the incredibly heavy loads I put it through
-            with our various launch simulations.
+        <ToolsSection title="Productivity">
+          <Tool title="Claude.ai">
+            Claude might as well be my mentor and business partner. He
+            single-handedly taught me how to leverage AWS, provided options to
+            guide my family's decision on where to move, and gifted endless
+            inspiration for content. All for free.
           </Tool>
-          <Tool title="Apple Pro Display XDR (Standard Glass)">
-            The only display on the market if you want something HiDPI and
-            bigger than 27”. When you’re working at planetary scale, every pixel
-            you can get counts.
+          <Tool title="Passion Planner">
+            My one tried and true journal that's been with me since the
+            Pandemic. I have the version where it's year-agnostic, so I can use
+            the next page for any date, no matter how long it's been since I
+            made my last entry.
           </Tool>
-          <Tool title="IBM Model M SSK Industrial Keyboard">
-            They don’t make keyboards the way they used to. I buy these any time
-            I see them go up for sale and keep them in storage in case I need
-            parts or need to retire my main.
+          <Tool title="Pip Decks">
+            I bought these babies over Black Friday when they were heavily
+            discounted. While they still cost an arm and a leg, I have no
+            regrets about this purchase. I consistantly use the tactics in the
+            decks to build workshop curriculum, guide personal discovery, and
+            generate business ideas.
           </Tool>
-          <Tool title="Apple Magic Trackpad">
-            Something about all the gestures makes me feel like a wizard with
-            special powers. I really like feeling like a wizard with special
-            powers.
-          </Tool>
-          <Tool title="Herman Miller Aeron Chair">
-            If I’m going to slouch in the worst ergonomic position imaginable
-            all day, I might as well do it in an expensive chair.
+          <Tool title="Notion">
+            Yes, I am on the Notion train. Whether it's for project management
+            for my daily life, saving my written musings, or launching an easy
+            startup landing page, Notion truly is my favorite writing tool.
           </Tool>
         </ToolsSection>
         <ToolsSection title="Development tools">
-          <Tool title="Sublime Text 4">
-            I don’t care if it’s missing all of the fancy IDE features everyone
-            else relies on, Sublime Text is still the best text editor ever
-            made.
+          <Tool title="Cursor">
+            AI has transformed the way I code. It makes me faster and more
+            competant. Debugging is as easy as asking my Cursor Composer, "why
+            isn't it doing _____?" It's seriously a game changer. Also, it's
+            free.
           </Tool>
-          <Tool title="iTerm2">
-            I’m honestly not even sure what features I get with this that aren’t
-            just part of the macOS Terminal but it’s what I use.
+          <Tool title="Github">
+            This is where I keep all my cloud-based code repositories. I
+            appreciate how easy it is to share my work with others using my
+            Github profile.
           </Tool>
-          <Tool title="TablePlus">
-            Great software for working with databases. Has saved me from
-            building about a thousand admin interfaces for my various projects
-            over the years.
+          <Tool title="AWS">
+            I'm learning this tool currently. I'm convinced it's the cheapest
+            way to validate a business idea by using SES, Route 53, and Amplify
+            to spin up a simple landing page with email capture.
           </Tool>
         </ToolsSection>
         <ToolsSection title="Design">
           <Tool title="Figma">
-            We started using Figma as just a design tool but now it’s become our
-            virtual whiteboard for the entire company. Never would have expected
-            the collaboration features to be the real hook.
+            An industry standard but still important to note. Besides my
+            sketchbook, this is the only tool I use for UI design.
+          </Tool>
+          <Tool title="Affinity suite">
+            Last year, I switched from Adobe's painfully expensive subscription
+            model to the one time payment model of Affinity. It has replaced my
+            need for Illustrator, Photoshop, and Publisher.
           </Tool>
         </ToolsSection>
-        <ToolsSection title="Productivity">
-          <Tool title="Alfred">
-            It’s not the newest kid on the block but it’s still the fastest. The
-            Sublime Text of the application launcher world.
+        <ToolsSection title="Videography">
+          <Tool title="Canon EOS M6 Mark II">
+            This is my second Canon camera. I love how the screen flips around,
+            allowing me to see the video composition while being in front of the
+            camera.
           </Tool>
-          <Tool title="Reflect">
-            Using a daily notes system instead of trying to keep things
-            organized by topics has been super powerful for me. And with
-            Reflect, it’s still easy for me to keep all of that stuff
-            discoverable by topic even though all of my writing happens in the
-            daily note.
+          <Tool title="Canon EF-M 15-45mm f/3.5-6.3 Image Stabilization STM Zoom Lens">
+            My favorite lens for my favorite camera. I generally use this for
+            shooting Youtube videos, but I also have taken it into the wild to
+            capture animals at the zoo, architecture in our city, and small
+            details in flowers.
           </Tool>
-          <Tool title="SavvyCal">
-            Great tool for scheduling meetings while protecting my calendar and
-            making sure I still have lots of time for deep work during the week.
+          <Tool title="OBS">
+            This powerful tool is free and open source. I use it to screen
+            capture for Youtube videos. It's quite easy to superimpose my face
+            over the screen capture, and unlike many online tools, it has
+            unlimited video capture.
           </Tool>
-          <Tool title="Focus">
-            Simple tool for blocking distracting websites when I need to just do
-            the work and get some momentum going.
+        </ToolsSection>
+        <ToolsSection title="Workstation">
+          <Tool title="14” MacBook Pro, M1 Max, 64GB RAM (2021)">
+            For design, frontend engineering, and daily usage, there is no
+            competitor for me. Apple is the only way to go.
+          </Tool>
+          <Tool title="Bose 700s Noise Cancellation Headphones">
+            My absolute favorite headphones. The new QC Ultras don't provide as
+            much noise cancellation, nor do they block out as much background
+            noise while on calls. I just purchased new ear cushions after having
+            the same cushions for four years. I intend to use these headphones
+            for a long time and was devastated when they were discontinued.
+          </Tool>
+          <Tool title="Logitec MX Anywhere 3 For Mac">
+            This wireless, bluetooth mouse can connect to up to three different
+            devices. Which is perfect, because I have three laptops I use
+            between my work and personal life. It switches devices with one
+            click.
+          </Tool>
+          <Tool title="Keychron Q2 Pro">
+            My personal keyboard. I've made plans for gutting it and replacing
+            the key switches and caps, but so far, its factory switches/caps are
+            perfectly fine.
+          </Tool>
+          <Tool title="Dell Ultrasharp 27 4k Monitor">
+            In my current setup, I use two screens—one being this monitor. It's
+            crisp and has great color vibrancy. It can keep up with my Apple
+            laptop, which I love.
+          </Tool>
+          <Tool title="AK Racing Gaming Chair">
+            This is the only company that makes semi-affordable gaming chairs
+            comfortable for people under 4'4. The back and headrest are
+            perfectly sized. Maybe short people should complain more often.
+          </Tool>
+          <Tool title="14” MacBook Pro, M1 Max, 64GB RAM (2021)">
+            For design, frontend engineering, and daily usage, there is no
+            competitor for me. Apple is the only way to go.
+          </Tool>
+          <Tool title="Standing Desk">
+            I try to avoid sitting all day, but that's difficult when your job
+            involves using a computer. I don't always stand, but when I do, it's
+            with my L-shaped standing desk.
           </Tool>
         </ToolsSection>
       </div>
