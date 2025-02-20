@@ -126,7 +126,7 @@ export default function Uses() {
             for a long time and was devastated when they were discontinued.
           </Tool>
           <Tool title="Logitec MX Anywhere 3 For Mac">
-            This wireless, bluetooth mouse can connect to up to three different
+            This wireless, pinktooth mouse can connect to up to three different
             devices. Which is perfect, because I have three laptops I use
             between my work and personal life. It switches devices with one
             click.

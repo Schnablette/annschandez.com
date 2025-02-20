@@ -120,46 +120,55 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 // }
 
 function SocialLink({
+  href,
+  children,
   icon: Icon,
-  ...props
-}: React.ComponentPropsWithoutRef<typeof Link> & {
+}: {
+  className?: string
+  href: string
   icon: React.ComponentType<{ className?: string }>
+  children?: React.ReactNode
 }) {
   return (
-    <Link className="group -m-1 p-1" target="_blank" {...props}>
-      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+    <Link
+      href={href}
+      target="_blank"
+      className="group flex text-sm font-medium text-zinc-800 transition hover:text-pink-500 dark:text-zinc-200 dark:hover:text-pink-500"
+    >
+      <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-pink-500" />
+      {children && <span className="ml-4">{children}</span>}
     </Link>
   )
 }
 
-function Newsletter() {
-  return (
-    <form
-      action="/thank-you"
-      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
-    >
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Stay up to date</span>
-      </h2>
-      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Get notified when I publish something new, and unsubscribe at any time.
-      </p>
-      <div className="mt-6 flex">
-        <input
-          type="email"
-          placeholder="Email address"
-          aria-label="Email address"
-          required
-          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(--spacing(2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 focus:outline-hidden sm:text-sm dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10"
-        />
-        <Button type="submit" className="ml-4 flex-none">
-          Join
-        </Button>
-      </div>
-    </form>
-  )
-}
+// function Newsletter() {
+//   return (
+//     <form
+//       action="/thank-you"
+//       className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
+//     >
+//       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+//         <MailIcon className="h-6 w-6 flex-none" />
+//         <span className="ml-3">Stay up to date</span>
+//       </h2>
+//       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+//         Get notified when I publish something new, and unsubscribe at any time.
+//       </p>
+//       <div className="mt-6 flex">
+//         <input
+//           type="email"
+//           placeholder="Email address"
+//           aria-label="Email address"
+//           required
+//           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(--spacing(2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-pink-500 focus:ring-4 focus:ring-pink-500/10 focus:outline-hidden sm:text-sm dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-pink-400 dark:focus:ring-pink-400/10"
+//         />
+//         <Button type="submit" className="ml-4 flex-none">
+//           Join
+//         </Button>
+//       </div>
+//     </form>
+//   )
+// }
 
 interface Role {
   company: string
@@ -181,7 +190,12 @@ function Role({ role }: { role: Role }) {
   return (
     <li className="flex gap-4">
       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-50 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-auto w-7" unoptimized />
+        <Image
+          src={role.logo}
+          alt={`${role.title} logo`}
+          className="h-auto w-7"
+          unoptimized
+        />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -329,6 +343,13 @@ export default async function Home() {
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
+            <SocialLink
+              href="mailto:annschandez@gmail.com"
+              aria-label="Follow on LinkedIn"
+              icon={MailIcon}
+            >
+              annschandez@gmail.com
+            </SocialLink>
           </div>
         </div>
       </Container>
@@ -358,7 +379,7 @@ export default async function Home() {
             <p className="text-base text-zinc-600 dark:text-zinc-300">
               <a
                 href="https://www.linkedin.com/in/kpretsch/"
-                className="text-blue-400 underline dark:text-blue-200"
+                className="text-pink-400 underline dark:text-pink-200"
                 target="_blank"
               >
                 Kyle Pretsch
